@@ -1,3 +1,6 @@
+# orchestrator is implemented as langgraph
+# can run locally with no API key
+
 from typing import TypedDict
 from langgraph.graph import StateGraph, START, END
 

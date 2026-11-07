@@ -1,2 +1,0 @@
-# mvf
-minimum viable factory

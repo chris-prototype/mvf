@@ -1,3 +1,6 @@
+# record is implemented as linear
+# ticket created online and accessed via API key
+
 import os
 import requests
 
