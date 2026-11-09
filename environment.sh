@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # environment
-# builds and agent image and runs a container containing claude code
+# environment is implemented as a docker container
+# the script builds and agent image and runs a container containing claude code
 
 # build the agent image
 docker build -f .devcontainer/Dockerfile.agent -t factory-agent .

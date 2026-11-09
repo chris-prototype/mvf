@@ -1,6 +1,6 @@
 # orchestrator
-# orchestrator is implemented as langgraph, it can run locally with no API key
-# pip install langgraph
+# orchestrator is implemented as langgraph
+# it can run locally with no API key - pip install langgraph
 
 from typing import TypedDict
 from langgraph.graph import StateGraph, START, END
@@ -13,7 +13,7 @@ class State(TypedDict):
 
 # nodes
 #
-# nodes are functions that take the current state and return and update to it
+# nodes are functions that take the current state and return an update to it
 # state is a user defined name and State is a typehint
 def load_spec(state: State):
     return {"status": "Spec Loaded"}
