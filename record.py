@@ -28,10 +28,10 @@ response = requests.post(
 
 issue = response.json()["data"]["issue"]
 
-print(f"Title:   {issue['title']}")
-print(f"State:   {issue['state']['name']}")
-print(f"Project: {issue['project']['name']}")
-print(f"\n{issue['description']}")
+# print(f"Title:   {issue['title']}")
+# print(f"State:   {issue['state']['name']}")
+# print(f"Project: {issue['project']['name']}")
+# print(f"\n{issue['description']}")
 
 
 #
