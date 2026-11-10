@@ -1,3 +1,4 @@
+# pip install google-genai
 from google import genai
 
 # looks for GEMINI_API_KEY
