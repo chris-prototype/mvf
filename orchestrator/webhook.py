@@ -1,13 +1,15 @@
 import hashlib
 import hmac
+import os
 from fastapi import FastAPI, Header, HTTPException, Request
 
 app = FastAPI()
-SECRET = b"my_secret_key"
+SECRET = os.getenv("LINEARHOOK", "").encode("utf-8")
 
-@app.post("/webhook")
+
+@app.post("/webhook/linear")
 async def webhook(
-    request: Request, signature: str = Header(None, alias="X-Signature")
+    request: Request, signature: str = Header(None, alias="Linear-Signature")
 ):
   body = await request.body()
 
@@ -18,4 +20,5 @@ async def webhook(
     raise HTTPException(status_code=403, detail="Invalid signature")
 
   data = await request.json()
+  print("Received Linear Event:", data)
   return {"status": "ok", "received": data}
