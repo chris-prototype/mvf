@@ -1,8 +1,13 @@
-{
+{ 
+  "_comments": "comments",
   "mcpServers": {
     "github": {
       "type": "streamable-http",
       "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "linear": {
+      "type": "streamable-http",
+      "url": "https://mcp.linear.app/mcp"
     }
   }
 }
