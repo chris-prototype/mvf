@@ -5,7 +5,10 @@
 import os
 import requests
 import json
+from rich.console import Console
+from rich.markdown import Markdown
 
+# select the properties we wish to request from the issue
 query = """
 query {
   issue(id: "TES-5") {
@@ -26,32 +29,11 @@ response = requests.post(
     json={"query": query}
 )
 
+# response.json accepts json and creates a dictionary
 issue = response.json()["data"]["issue"]
 
-# print(f"Title:   {issue['title']}")
-# print(f"State:   {issue['state']['name']}")
-# print(f"Project: {issue['project']['name']}")
-# print(f"\n{issue['description']}")
-
-
-#
-# save for later - print markdown in the console
-#
-
-from rich.console import Console
-from rich.markdown import Markdown
-
+print(f"Title:   {issue['title']}")
+print(f"State:   {issue['state']['name']}")
+print(f"Project: {issue['project']['name']}")
+print(f"\n{issue['description']}")
 Console().print(Markdown(issue["description"]))
-
-
-#
-# save for later
-#
-
-# response.json accepts json and creates a dictionary
-# object_dict = response.json()
-
-# takes dictionary and creates a formatted json string 
-# string_JSON = json.dumps(object_dict, indent=2)
-
-# print(string_JSON)
