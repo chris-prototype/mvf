@@ -15,3 +15,7 @@ mcp-local() {
 mcp-github() {
   npx -y @modelcontextprotocol/inspector --config config/mcp.json --server github --header "Authorization: Bearer $MVF_GITHUB"
 }
+
+mcp-linear() {
+  npx -y @modelcontextprotocol/inspector --config config/mcp.json --server linear --header "Authorization: Bearer $MVF_LINEAR"
+}
