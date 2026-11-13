@@ -9,11 +9,13 @@ response = client.models.generate_content(
 )
 print(response.text)
 
-# from google import genai
+# use to see which models are available
+# 
 # client = genai.Client()
 # for m in client.models.list():
 #     print(m.name)
 
+# Attempted to use:
 
 # slow
 # gemini-3.8-flash
