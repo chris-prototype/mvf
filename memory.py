@@ -1,4 +1,6 @@
+from datetime import datetime
 import os
+
 MEMORY_DIR = "memory"
 MEMORY_FILE = "context.md"
 
@@ -21,8 +23,9 @@ class AgentMemory:
 
     def write(self, entry: str):
         """Appends a new event, thought, or milestone to the memory log."""
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with open(self.memory_file, "a") as f:
-            f.write(f"- {entry}\n")
+            f.write(f"- [{timestamp}] {entry}\n")
 
 
 if __name__ == "__main__":
