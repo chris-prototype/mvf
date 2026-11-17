@@ -1,0 +1,4 @@
+.agents/
+.cache/
+.local/
+__pycache__/
