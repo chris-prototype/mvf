@@ -1,11 +1,7 @@
 from langgraph.graph import END, StateGraph
 
-if __package__:
-    from .nodes import *
-    from .state import FactoryState
-else:
-    from nodes import *
-    from state import FactoryState
+from .nodes import *
+from .state import FactoryState
 
 
 def should_block(state: FactoryState) -> str:
