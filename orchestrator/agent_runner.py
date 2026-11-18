@@ -5,19 +5,10 @@ logs progress, and synchronizes state with Linear and memory files.
 
 import asyncio
 from state import FactoryState
+from claude_agent_sdk import AssistantMessage, ClaudeAgentOptions, TextBlock
+from claude_agent_sdk import query as claude_query
 
-from claude_agent_sdk import (
-    AssistantMessage,
-    ClaudeAgentOptions,
-    TextBlock,
-)
-from claude_agent_sdk import (
-    query as claude_query,
-)
-
-# modularizing code - _build_prompt - verify correctness
-#
-#
+# takes 3 state parameters, and 3 function parameters to build prompt used in _run_claude_session
 def _build_prompt(state: FactoryState, memory_content: str, skill_content: str, extra_prompt: str = "") -> str:
     ticket_id = state["ticket_id"]
     repo_name = state.get("repo_name", "")
@@ -36,9 +27,7 @@ def _build_prompt(state: FactoryState, memory_content: str, skill_content: str, 
     return prompt
 
 
-# modularizing code - _run_claude_session
-#
-#
+# 
 async def _run_claude_session(prompt: str, workspace_path: str, timeout: float) -> str:
     options = ClaudeAgentOptions(
         cwd=workspace_path,
@@ -48,7 +37,7 @@ async def _run_claude_session(prompt: str, workspace_path: str, timeout: float) 
             "mcp__linear__*", "mcp__github__*", "mcp__vercel__*", "mcp__supabase__*", "mcp__slack__*",
         ],
     )
-    # satisfy's the typechecker while validating sdk schema - isinstance
+    # satisfy's the typechecker while validating sdk schema - updated to use isinstance
     async def _collect() -> list[str]:
         parts: list[str] = []
         async for message in claude_query(prompt=prompt, options=options):
@@ -66,7 +55,7 @@ async def _run_claude_session(prompt: str, workspace_path: str, timeout: float) 
 
 
 
-
+# testing with wiremock.org
 # if __name__ == "__main__":
 #     result = asyncio.run(
 #         _run_claude_session(
