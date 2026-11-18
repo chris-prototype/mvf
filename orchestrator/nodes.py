@@ -1,4 +1,7 @@
-from .state import FactoryState
+if __package__:
+    from .state import FactoryState
+else:
+    from state import FactoryState
 
 
 def pm_agent(state: FactoryState) -> dict:
