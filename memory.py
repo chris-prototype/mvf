@@ -4,8 +4,9 @@ timestamped entry under a named ## section header in that file, replacing the _p
 with every action traced and audit-logged.
 '''
 
-from langsmith import traceable
 from pathlib import Path
+
+from langsmith import traceable
 
 MEMORY_DIR = Path("memory")
     

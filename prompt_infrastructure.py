@@ -1,5 +1,8 @@
 from textwrap import dedent
 
+GITHUB_ORG = "palceholder"
+
+
 def build_infra_prompt(repo_name, repo_full, title, ticket_id):
     return dedent(f"""\
         Set up the infrastructure for a new app. Do these steps in order:

@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 
+
 def _slugify(title: str) -> str:
     """Turn a ticket title into a valid GitHub repo name."""
     slug = title.lower().strip()
