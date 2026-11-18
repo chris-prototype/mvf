@@ -1,0 +1,4 @@
+ - consider DRY vs over coupling
+ - consider when to make implicit default values explicit
+ - look into syntax between """ here """ and ''' here '''
+ - run 

@@ -7,6 +7,8 @@ with every action traced and audit-logged.
 from langsmith import traceable
 from pathlib import Path
 
+MEMORY_DIR = Path("memory")
+    
 # `init_memory` creates a ticket's `.md` file from a template (unless it already exists), 
 # logs it, and returns the file's path.
 
