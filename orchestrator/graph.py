@@ -1,7 +1,7 @@
 from langgraph.graph import END, StateGraph
 
 from nodes import *
-from state import FactoryState
+from orchestrator.state import FactoryState
 
 
 def should_block(state: FactoryState) -> str:
