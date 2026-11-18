@@ -1,6 +1,8 @@
-from langgraph.graph import StateGraph, END
-from state import FactoryState
+from langgraph.graph import END, StateGraph
+
 from nodes import *
+from state import FactoryState
+
 
 def should_block(state: FactoryState) -> str:
     if state.get("error") or state.get("current_state") == "Blocked":
