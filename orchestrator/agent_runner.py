@@ -8,7 +8,7 @@ from state import FactoryState
 from claude_agent_sdk import AssistantMessage, ClaudeAgentOptions, TextBlock
 from claude_agent_sdk import query as claude_query
 
-# takes 3 state parameters, and 3 function parameters to build prompt used in _run_claude_session
+# takes 3 state parameters, and 3 function parameters to build a prompt used in _run_claude_session
 def _build_prompt(state: FactoryState, memory_content: str, skill_content: str, extra_prompt: str = "") -> str:
     ticket_id = state["ticket_id"]
     repo_name = state.get("repo_name", "")
@@ -27,7 +27,7 @@ def _build_prompt(state: FactoryState, memory_content: str, skill_content: str, 
     return prompt
 
 
-# 
+# run claude session with prompt, workspace_path(in state object), and timeout(in config file)
 async def _run_claude_session(prompt: str, workspace_path: str, timeout: float) -> str:
     options = ClaudeAgentOptions(
         cwd=workspace_path,
