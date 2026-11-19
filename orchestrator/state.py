@@ -5,3 +5,5 @@ from typing_extensions import TypedDict
 class FactoryState(TypedDict):
     ticket_id: str
     title: str
+    error: str
+    current_state: str
