@@ -4,7 +4,7 @@ logs progress, and synchronizes state with Linear and memory files.
 '''
 
 import asyncio
-from state import FactoryState
+from .state import FactoryState
 from claude_agent_sdk import AssistantMessage, ClaudeAgentOptions, TextBlock
 from claude_agent_sdk import query as claude_query
 

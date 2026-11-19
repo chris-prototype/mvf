@@ -1,4 +1,8 @@
 # pip install -r requirements.txt
 ruff
+pytest
+fastapi
+uvicorn
 langgraph
 claude-agent-sdk
+langsmith

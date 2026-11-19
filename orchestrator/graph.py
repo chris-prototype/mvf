@@ -1,8 +1,8 @@
 from typing import Any, cast
 
 from langgraph.graph import END, StateGraph
-from nodes import *
-from state import FactoryState
+from .nodes import *
+from .state import FactoryState
 
 # returns the next state after checking .error and .current_state of Factory State
 def should_block(state: FactoryState) -> str:

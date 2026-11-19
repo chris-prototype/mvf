@@ -1,4 +1,4 @@
-from state import FactoryState
+from .state import FactoryState
 
 
 def pm_agent(state: FactoryState) -> dict:
