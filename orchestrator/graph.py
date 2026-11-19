@@ -1,3 +1,5 @@
+from typing import Any, cast
+
 from langgraph.graph import END, StateGraph
 from nodes import *
 from state import FactoryState
@@ -10,7 +12,8 @@ def should_block(state: FactoryState) -> str:
 
 # FactoryState is passed into StateGraph to create the graph
 def build_graph() -> StateGraph:
-    graph = StateGraph(FactoryState)
+    # LangGraph accepts this TypedDict at runtime; ty does not recognize the imported schema.
+    graph = StateGraph(cast(Any, FactoryState))
     
     # nodes
     graph.add_node("pm_agent", pm_agent)

@@ -1,4 +1,4 @@
-from typing import TypedDict
+from typing_extensions import TypedDict
 
 
 # define the shape for the FactoryState passed to LangGraph's StateGraph
