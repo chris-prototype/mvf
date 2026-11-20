@@ -1,3 +1,8 @@
+"""
+
+ - Contains the graph determining the overall workflow of the MVF
+
+"""
 from typing import Any, cast
 
 from langgraph.graph import END, StateGraph

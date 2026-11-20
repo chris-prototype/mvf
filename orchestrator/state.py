@@ -1,3 +1,8 @@
+"""
+
+ - Contains the FactoryState definition used by LangGraph
+
+"""
 from typing_extensions import TypedDict
 
 
