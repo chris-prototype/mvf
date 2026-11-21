@@ -16,19 +16,24 @@ CODE ANALYSIS AND REFACTOR
  - created and populated _template.md           19
  - created and populated CLAUDE.md              36
  - created and populated settings.json          39
+Total lines analyzed:                           95 / ~2000
 
 CODE REQUIREMENTS
  - clause skills requires a separate directory for each skill ( see REFERENCE )
 
 CODE - STRUCTURE, SCHEMAS & MORE
 
-  Overview
-   - 6 agents are represented by 6 skill files in .clause/skills
-   - 6 sections in the .md memory - represent where agents record their work
-  
-  .md memory template contains 
-   - ticket id - ticket title : ticket title contains - spec, architecture descion, implementation, code review, test results, deploy log
+  Agents
+    - 6 agents are represented by 6 skill files in .clause/skills
+    - 6 sections in the .md memory - represent where agents record their work
 
+  Memory .md file
+    .md memory template contains 6 sections 
+    - ticket id - ticket title : ticket title contains - spec, architecture descion, implementation, code review, test results, deploy log
+
+  FactorState
+    contains 9 fields
+    - ticket_id, title, current_state, error, parent_issue_id, subtasks, stage_sub_issues, repo_name, workspace_path 
 
 REFERENCE
 https://code.claude.com/docs/en/skills - SKILLS.md
