@@ -1,9 +1,38 @@
 CONSIDERATIONS
+ - consider making code generation as determenistic as possible
  - consider DRY vs over coupling
  - consider when to make implicit default values explicit
  - look into syntax between """ here """ and ''' here '''
  - consider order of python dependencies in requirements.txt
 
+
 ANALYSIS METHOD
-  - have the ai give overviews of one sentence long for - app, files, functions
-  - write new code with 100 percent understanding of syntax and logic
+ - have ai deconstuct large files into commented functions 5 - 15 lines long
+ - have the ai give overviews of one sentence long for - app, files, functions
+
+CODE ANALYSIS AND REFACTOR
+ - created top level folders
+ - created and populated .gitkeep               1
+ - created and populated _template.md           19
+ - created and populated CLAUDE.md              36
+ - created and populated settings.json          39
+
+CODE REQUIREMENTS
+ - clause skills requires a separate directory for each skill ( see REFERENCE )
+
+CODE - STRUCTURE, SCHEMAS & MORE
+
+  Overview
+   - 6 agents are represented by 6 skill files in .clause/skills
+   - 6 sections in the .md memory - represent where agents record their work
+  
+  .md memory template contains 
+   - ticket id - ticket title : ticket title contains - spec, architecture descion, implementation, code review, test results, deploy log
+
+
+REFERENCE
+https://code.claude.com/docs/en/skills - SKILLS.md
+https://code.claude.com/docs/en/memory - CLAUDE.md
+https://code.claude.com/docs/en/settings - settings.json
+
+
