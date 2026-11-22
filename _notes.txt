@@ -28,14 +28,14 @@ CODE REQUIREMENTS
 CODE - STRUCTURE, SCHEMAS & MORE
 
   Agents
-    - 6 agents are represented by 6 skill files in .clause/skills
+    - 6 agents are represented by 6 skill files in .claude/skills
     - 6 sections in the .md memory - represent where agents record their work
 
   Memory .md file
     .md memory template contains 6 sections 
     - ticket id - ticket title : ticket title contains - spec, architecture descion, implementation, code review, test results, deploy log
 
-  FactorState
+  FactoryState
     contains 9 fields
     - ticket_id, title, current_state, error, parent_issue_id, subtasks, stage_sub_issues, repo_name, workspace_path 
 
