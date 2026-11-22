@@ -11,12 +11,16 @@ ANALYSIS METHOD
  - have the ai give overviews of one sentence long for - app, files, functions
 
 CODE ANALYSIS AND REFACTOR
- - created top level folders
+ - created top level folders                    ~ lines
  - created and populated .gitkeep               1
  - created and populated _template.md           19
  - created and populated CLAUDE.md              36
  - created and populated settings.json          39
-Total lines analyzed:                           95 / ~2000
+ - created and populated config.py              35
+ - created and populated state.py               33
+ - created and populated graph.py               80
+Total lines analyzed:                           244 / ~2000
+
 
 CODE REQUIREMENTS
  - clause skills requires a separate directory for each skill ( see REFERENCE )
