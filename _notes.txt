@@ -19,7 +19,8 @@ CODE ANALYSIS AND REFACTOR
  - created and populated config.py              35
  - created and populated state.py               33
  - created and populated graph.py               80
-Total lines analyzed:                           244 / ~2000
+ - created and populated agents.py              32
+Total lines analyzed:                           276 / ~2000
 
 
 CODE REQUIREMENTS
