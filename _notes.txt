@@ -10,15 +10,16 @@ ANALYSIS METHOD
  - have the ai give overviews of one sentence long for - app, files, functions
 
 CODE ANALYSIS AND REFACTOR
- - created top level folders                    ~ lines
+ - completed                                    ~ lines
  - created and populated .gitkeep               1
  - created and populated _template.md           19
- - created and populated CLAUDE.md              36
  - created and populated settings.json          39
  - created and populated config.py              35
  - created and populated state.py               33
  - created and populated graph.py               80
  - created and populated agents.py              91
+ - populating .claude                           96
+
 Total lines analyzed:                           x / ~2000
 
 
