@@ -10,4 +10,5 @@ res = client.chat.completions.create(
     model="openrouter/auto",
     messages=[{"role": "user", "content": "Hi"}],
 )
+print("Model:", res.model)
 print(res.choices[0].message.content)
