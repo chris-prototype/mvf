@@ -1,13 +1,12 @@
 CONSIDERATIONS
- - consider making code generation as determenistic as possible
+ - consider making code generation as quantitative and determenistic as possible
  - consider DRY vs over coupling
  - consider when to make implicit default values explicit
  - look into syntax between """ here """ and ''' here '''
  - consider order of python dependencies in requirements.txt
 
-
 ANALYSIS METHOD
- - have ai deconstuct large files into commented functions 5 - 15 lines long
+ - have ai deconstuct large files into commented functions 5 - 20 lines long
  - have the ai give overviews of one sentence long for - app, files, functions
 
 CODE ANALYSIS AND REFACTOR
@@ -19,12 +18,12 @@ CODE ANALYSIS AND REFACTOR
  - created and populated config.py              35
  - created and populated state.py               33
  - created and populated graph.py               80
- - created and populated agents.py              32
-Total lines analyzed:                           276 / ~2000
+ - created and populated agents.py              91
+Total lines analyzed:                           x / ~2000
 
 
 CODE REQUIREMENTS
- - clause skills requires a separate directory for each skill ( see REFERENCE )
+ - claude skills requires a separate directory for each skill ( see REFERENCE )
 
 CODE - STRUCTURE, SCHEMAS & MORE
 
