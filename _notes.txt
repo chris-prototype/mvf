@@ -5,40 +5,42 @@ CONSIDERATIONS
  - look into syntax between """ here """ and ''' here '''
  - consider order of python dependencies in requirements.txt
 
+
 ANALYSIS METHOD
- - have ai deconstuct large files into commented functions 5 - 20 lines long
- - have the ai give overviews of one sentence long for - app, files, functions
+ - have ai deconstuct large files into logical testable functions - agent_runner is example 1
+ - have the ai give overviews of one sentence long for - app, files, functions as needed
+
 
 CODE ANALYSIS AND REFACTOR
- - completed                                    ~ lines
- - created and populated .gitkeep               1
- - created and populated _template.md           19
- - created and populated settings.json          39
- - created and populated config.py              35
- - created and populated state.py               33
- - created and populated graph.py               80
- - created and populated agents.py              91
- - populating .claude                           96
-
-Total lines analyzed:                           x / ~2000
+  - completed                                         ~ lines ( round )
+  - populated audit/.gitkeep                          0
+  - populated memory/_template.md                     20
+  - populated o/config.py                             40
+  - populated o/state.py                              30
+  - populated o/graph.py                              80
+  - populated o/nodes/agents.py                       30
+  - populated o/agent_runner                          50
+  - populated .claude/CLAUDE.md                       100
+  - populated .clause/skills/                         50
+  - populated .claude/settings.json                   40
+Total lines analyzed:                                 440 / ~2000
 
 
 CODE REQUIREMENTS
  - claude skills requires a separate directory for each skill ( see REFERENCE )
 
-CODE - STRUCTURE, SCHEMAS & MORE
 
+CODE - STRUCTURE, SCHEMAS & MORE
   Agents
     - 6 agents are represented by 6 skill files in .claude/skills
     - 6 sections in the .md memory - represent where agents record their work
-
   Memory .md file
     .md memory template contains 6 sections 
     - ticket id - ticket title : ticket title contains - spec, architecture descion, implementation, code review, test results, deploy log
-
   FactoryState
     contains 9 fields
     - ticket_id, title, current_state, error, parent_issue_id, subtasks, stage_sub_issues, repo_name, workspace_path 
+
 
 REFERENCE
 https://code.claude.com/docs/en/skills - SKILLS.md
